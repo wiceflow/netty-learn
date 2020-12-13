@@ -22,7 +22,6 @@ public class SplitByteBufDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf msg, List<Object> out) throws Exception {
-
         if (msg == null) {
             return;
         }
