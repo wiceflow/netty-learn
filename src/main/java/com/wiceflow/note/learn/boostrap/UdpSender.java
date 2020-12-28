@@ -61,16 +61,16 @@ public class UdpSender {
 
             //6.等待channel的close
             channel.closeFuture().sync();
-            //7.关闭group
+    //7.关闭group
             group.shutdownGracefully();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+} catch (InterruptedException e) {
+        e.printStackTrace();
         }
-    }
+        }
 
-    /**
-     * 编码器，将要发送的消息（这里是一个String）封装到一个DatagramPacket中
-     */
+/**
+ * 编码器，将要发送的消息（这里是一个String）封装到一个DatagramPacket中
+ */
     private static class MyUdpEncoder extends MessageToMessageEncoder<String> {
         /**
          * 这里是广播的地址和端口
